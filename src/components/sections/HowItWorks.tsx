@@ -7,7 +7,7 @@ export function HowItWorks() {
         <AnimatedSection className="py-20 sm:py-28">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="text-center">
-                    <h2 className="text-3xl font-bold text-white sm:text-4xl">Comece em 3 passos simples</h2>
+                    <h2 className="text-3xl font-bold text-foreground sm:text-4xl">Comece em 3 passos simples</h2>
                 </div>
 
                 <div className="mt-14 grid gap-8 sm:grid-cols-3">
@@ -26,8 +26,8 @@ export function HowItWorks() {
                             <div className="mx-auto mb-4 mt-2 flex h-14 w-14 items-center justify-center rounded bg-primary/10">
                                 <s.icon className="h-7 w-7 text-primary" />
                             </div>
-                            <h3 className="text-lg font-semibold text-white">{s.title}</h3>
-                            <p className="mt-2 text-sm text-sidebar-foreground/60">{s.desc}</p>
+                            <h3 className="text-lg font-semibold text-foreground">{s.title}</h3>
+                            <p className="mt-2 text-sm text-muted-foreground">{s.desc}</p>
                         </motion.div>
                     ))}
                 </div>

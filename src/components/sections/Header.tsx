@@ -16,7 +16,7 @@ export function Header({ scrollTo }: { scrollTo: (id: string) => void }) {
             <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
                 <button onClick={() => handleScroll("hero")} className="flex items-center gap-2" aria-label="Ir para o topo">
                     <div className="flex h-9 w-9 items-center justify-center rounded bg-primary font-bold text-primary-foreground text-lg">O</div>
-                    <span className="text-xl font-bold tracking-tight text-white">Opazia</span>
+                    <span className="text-xl font-bold tracking-tight text-foreground">Opazia</span>
                 </button>
 
                 {/* Desktop nav */}
@@ -26,7 +26,7 @@ export function Header({ scrollTo }: { scrollTo: (id: string) => void }) {
                         ["Planos", "planos"],
                         ["FAQ", "faq"],
                     ].map(([label, id]) => (
-                        <button key={id} onClick={() => handleScroll(id)} className="text-sm text-sidebar-foreground/70 transition-colors hover:text-primary">
+                        <button key={id} onClick={() => handleScroll(id)} className="text-sm text-muted-foreground transition-colors hover:text-primary">
                             {label}
                         </button>
                     ))}
@@ -36,7 +36,7 @@ export function Header({ scrollTo }: { scrollTo: (id: string) => void }) {
                 </nav>
 
                 {/* Mobile hamburger */}
-                <button className="text-white md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-expanded={mobileMenuOpen} aria-label="Menu Principal">
+                <button className="text-foreground md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-expanded={mobileMenuOpen} aria-label="Menu Principal">
                     {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
                 </button>
             </div>
@@ -53,7 +53,7 @@ export function Header({ scrollTo }: { scrollTo: (id: string) => void }) {
                         ["Planos", "planos"],
                         ["FAQ", "faq"],
                     ].map(([label, id]) => (
-                        <button key={id} onClick={() => handleScroll(id)} className="block w-full py-3 text-left text-sidebar-foreground/70 hover:text-primary">
+                        <button key={id} onClick={() => handleScroll(id)} className="block w-full py-3 text-left text-muted-foreground hover:text-primary">
                             {label}
                         </button>
                     ))}

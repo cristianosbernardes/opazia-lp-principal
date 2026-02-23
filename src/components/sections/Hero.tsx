@@ -15,14 +15,14 @@ export function Hero({ scrollTo }: { scrollTo: (id: string) => void }) {
                         🚀 7 dias grátis — sem cartão de crédito
                     </Badge>
 
-                    <h1 className="mx-auto max-w-4xl text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+                    <h1 className="mx-auto max-w-4xl text-4xl font-extrabold leading-tight tracking-tight text-foreground sm:text-5xl lg:text-6xl">
                         Venda mais consórcios e financiamentos com o{" "}
-                        <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
+                        <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
                             Opazia
                         </span>
                     </h1>
 
-                    <p className="mx-auto mt-6 max-w-2xl text-lg text-sidebar-foreground/70 sm:text-xl">
+                    <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl">
                         A plataforma completa de gestão de vendas que centraliza leads, automatiza seu pipeline e dispara sua conversão.
                     </p>
 
@@ -30,7 +30,7 @@ export function Hero({ scrollTo }: { scrollTo: (id: string) => void }) {
                         <Button size="lg" className="h-10 rounded px-8 text-base font-semibold shadow-lg shadow-primary/20 bg-gradient-to-r from-primary to-primary/80 hover:scale-[1.02] active:scale-[0.98] transition-transform text-white border-0" onClick={() => scrollTo("planos")}>
                             Teste grátis por 7 dias <ArrowRight className="ml-2 h-5 w-5" />
                         </Button>
-                        <Button size="lg" variant="outline" className="h-10 rounded border border-border px-8 text-base text-white hover:bg-sidebar-accent hover:border-sidebar-foreground/50 transition-colors" onClick={() => scrollTo("funcionalidades")}>
+                        <Button size="lg" variant="outline" className="h-10 rounded border border-input px-8 text-base text-foreground hover:bg-gray-50 hover:border-gray-300 transition-colors" onClick={() => scrollTo("funcionalidades")}>
                             Ver funcionalidades
                         </Button>
                     </div>
@@ -47,7 +47,7 @@ export function Hero({ scrollTo }: { scrollTo: (id: string) => void }) {
                         <div className="h-3 w-3 rounded-full bg-destructive/60" />
                         <div className="h-3 w-3 rounded-full bg-warning/60" />
                         <div className="h-3 w-3 rounded-full bg-success/60" />
-                        <span className="ml-2 text-xs text-sidebar-muted">app.opazia.com.br</span>
+                        <span className="ml-2 text-xs text-muted-foreground">app.opazia.com.br</span>
                     </div>
                     <div className="grid grid-cols-4 gap-4 p-6">
                         {[
@@ -58,8 +58,8 @@ export function Hero({ scrollTo }: { scrollTo: (id: string) => void }) {
                         ].map((kpi) => (
                             <div key={kpi.label} className="rounded border border-border bg-sidebar p-4 text-center">
                                 <kpi.icon className={`mx-auto mb-2 h-5 w-5 ${kpi.color}`} />
-                                <p className="text-lg font-bold text-white sm:text-xl">{kpi.value}</p>
-                                <p className="text-xs text-sidebar-muted">{kpi.label}</p>
+                                <p className="text-lg font-bold text-foreground sm:text-xl">{kpi.value}</p>
+                                <p className="text-xs text-muted-foreground">{kpi.label}</p>
                             </div>
                         ))}
                     </div>
