@@ -3,7 +3,12 @@ import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export function Header({ scrollTo }: { scrollTo: (id: string) => void }) {
+interface HeaderProps {
+    scrollTo: (id: string) => void;
+    onOpenModal: () => void;
+}
+
+export function Header({ scrollTo, onOpenModal }: HeaderProps) {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     const handleScroll = (id: string) => {
@@ -30,7 +35,7 @@ export function Header({ scrollTo }: { scrollTo: (id: string) => void }) {
                             {label}
                         </button>
                     ))}
-                    <Button size="sm" onClick={() => handleScroll("planos")} className="h-10 rounded shadow-md bg-gradient-to-r from-primary to-primary/80 px-6 font-semibold hover:scale-[1.02] active:scale-[0.98] transition-transform">
+                    <Button size="sm" onClick={onOpenModal} className="h-10 rounded shadow-md bg-gradient-to-r from-primary to-primary/80 px-6 font-semibold hover:scale-[1.02] active:scale-[0.98] transition-transform text-white border-0">
                         Comece grátis
                     </Button>
                 </nav>

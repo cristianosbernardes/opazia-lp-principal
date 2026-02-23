@@ -2,7 +2,11 @@ import { ArrowRight } from "lucide-react";
 import { AnimatedSection } from "./AnimatedSection";
 import { Button } from "@/components/ui/button";
 
-export function CallToAction({ scrollTo }: { scrollTo: (id: string) => void }) {
+interface CallToActionProps {
+    onOpenModal: () => void;
+}
+
+export function CallToAction({ onOpenModal }: CallToActionProps) {
     return (
         <AnimatedSection className="py-20 sm:py-28">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -20,7 +24,7 @@ export function CallToAction({ scrollTo }: { scrollTo: (id: string) => void }) {
                         <Button
                             size="lg"
                             className="mt-8 h-10 rounded bg-white px-10 text-base font-semibold text-primary hover:bg-white/90 shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-transform"
-                            onClick={() => scrollTo("planos")}
+                            onClick={onOpenModal}
                         >
                             Comece seu trial grátis agora <ArrowRight className="ml-2 h-5 w-5" />
                         </Button>

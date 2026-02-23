@@ -3,7 +3,12 @@ import { ArrowRight, BarChart3, Users, Target, Zap } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
-export function Hero({ scrollTo }: { scrollTo: (id: string) => void }) {
+interface HeroProps {
+    scrollTo: (id: string) => void;
+    onOpenModal: () => void;
+}
+
+export function Hero({ scrollTo, onOpenModal }: HeroProps) {
     return (
         <section id="hero" className="relative overflow-hidden pt-28 pb-20 sm:pt-36 sm:pb-28">
             {/* Glow */}
@@ -27,7 +32,7 @@ export function Hero({ scrollTo }: { scrollTo: (id: string) => void }) {
                     </p>
 
                     <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-                        <Button size="lg" className="h-10 rounded px-8 text-base font-semibold shadow-lg shadow-primary/20 bg-gradient-to-r from-primary to-primary/80 hover:scale-[1.02] active:scale-[0.98] transition-transform text-white border-0" onClick={() => scrollTo("planos")}>
+                        <Button size="lg" className="h-10 rounded px-8 text-base font-semibold shadow-lg shadow-primary/20 bg-gradient-to-r from-primary to-primary/80 hover:scale-[1.02] active:scale-[0.98] transition-transform text-white border-0" onClick={onOpenModal}>
                             Teste grátis por 7 dias <ArrowRight className="ml-2 h-5 w-5" />
                         </Button>
                         <Button size="lg" variant="outline" className="h-10 rounded border border-input px-8 text-base text-foreground hover:bg-gray-50 hover:border-gray-300 transition-colors" onClick={() => scrollTo("funcionalidades")}>

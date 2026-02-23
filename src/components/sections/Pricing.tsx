@@ -5,7 +5,11 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Check, Star } from "lucide-react";
 
-export function Pricing() {
+interface PricingProps {
+    onOpenModal: () => void;
+}
+
+export function Pricing({ onOpenModal }: PricingProps) {
     return (
         <AnimatedSection id="planos" className="py-20 sm:py-28">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -59,6 +63,7 @@ export function Pricing() {
                                 className={`mt-8 w-full h-10 rounded font-semibold transition-transform active:scale-[0.98] ${plan.popular ? "shadow-lg shadow-primary/20 bg-gradient-to-r from-primary to-primary/80 border-0 text-white hover:scale-[1.02]" : "border-border text-foreground hover:border-sidebar-foreground/50 hover:bg-gray-50"
                                     }`}
                                 variant={plan.popular ? "default" : "outline"}
+                                onClick={onOpenModal}
                             >
                                 Começar trial grátis
                             </Button>
