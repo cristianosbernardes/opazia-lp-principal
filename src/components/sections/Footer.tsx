@@ -1,4 +1,5 @@
 import { Instagram, Linkedin, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function Footer({ scrollTo }: { scrollTo: (id: string) => void }) {
     return (
@@ -38,8 +39,8 @@ export function Footer({ scrollTo }: { scrollTo: (id: string) => void }) {
                     <div>
                         <h4 className="mb-3 text-sm font-semibold text-foreground">Legal</h4>
                         <ul className="space-y-2 text-sm text-muted-foreground">
-                            <li><a href="#" className="hover:text-primary transition-colors">Termos de uso</a></li>
-                            <li><a href="#" className="hover:text-primary transition-colors">Política de privacidade</a></li>
+                            <li><Link to="/termos-de-servico" className="hover:text-primary transition-colors">Termos de Serviço</Link></li>
+                            <li><Link to="/politica-de-privacidade" className="hover:text-primary transition-colors">Política de privacidade</Link></li>
                         </ul>
                     </div>
                 </div>
