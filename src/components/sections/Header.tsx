@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 interface HeaderProps {
     scrollTo: (id: string) => void;
@@ -10,9 +11,20 @@ interface HeaderProps {
 
 export function Header({ scrollTo, onOpenModal }: HeaderProps) {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const navigate = useNavigate();
 
     const handleScroll = (id: string) => {
-        scrollTo(id);
+        if (id === "planos") {
+            navigate("/planos");
+        } else if (id === "funcionalidades") {
+            navigate("/funcionalidades");
+        } else if (id === "faq") {
+            navigate("/faq");
+        } else if (id === "hero") {
+            navigate("/");
+        } else {
+            scrollTo(id);
+        }
         setMobileMenuOpen(false);
     };
 

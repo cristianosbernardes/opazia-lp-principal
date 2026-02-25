@@ -49,28 +49,28 @@ export const metrics = [
 
 export const plansList = [
   {
-    name: "Key Starter",
+    name: "Starter",
     price: "147,90",
     users: "1 usuário",
     features: ["Dashboard executivo", "Pipeline Kanban", "Gestão de Leads", "Gerador de Propostas", "Suporte por e-mail"],
     popular: false,
   },
   {
-    name: "Key Essencial",
+    name: "Essencial",
     price: "597,90",
     users: "5 usuários",
     features: ["Tudo do Starter", "Financeiro completo", "Ranking de vendas", "Agenda integrada", "Suporte prioritário"],
     popular: true,
   },
   {
-    name: "Key Prime",
+    name: "Prime",
     price: "1.297,90",
     users: "20 usuários",
     features: ["Tudo do Essencial", "Disparos em massa", "Gestão de equipe", "Integração Meta Ads", "Gerente de sucesso"],
     popular: false,
   },
   {
-    name: "Key Black",
+    name: "Black",
     price: "2.497,00",
     users: "Usuários ilimitados",
     features: ["Tudo do Prime", "SaaS Admin", "API personalizada", "Onboarding dedicado", "SLA garantido"],

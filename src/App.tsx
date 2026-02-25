@@ -20,6 +20,9 @@ const App = () => (
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<LandingPage />} />
+          <Route path="/planos" element={<LandingPage />} />
+          <Route path="/funcionalidades" element={<LandingPage />} />
+          <Route path="/faq" element={<LandingPage />} />
           <Route path="/termos-de-servico" element={<TermsOfService />} />
           <Route path="/politica-de-privacidade" element={<PrivacyPolicy />} />
           <Route path="*" element={<NotFound />} />

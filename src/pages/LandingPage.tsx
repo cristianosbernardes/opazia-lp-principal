@@ -17,9 +17,15 @@ const LandingPage = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // Se vier de uma página legal com uma seção para rolar
-    if (location.state?.scrollTo) {
-      const element = document.getElementById(location.state.scrollTo);
+    // Se vier de uma rota específica ou estado de navegação com uma seção para rolar
+    const sectionToScroll = location.state?.scrollTo ||
+      (location.pathname === "/planos" ? "planos" :
+        location.pathname === "/funcionalidades" ? "funcionalidades" :
+          location.pathname === "/faq" ? "faq" :
+            location.pathname === "/" ? "hero" : null);
+
+    if (sectionToScroll) {
+      const element = document.getElementById(sectionToScroll);
       if (element) {
         setTimeout(() => {
           element.scrollIntoView({ behavior: "smooth" });

@@ -21,9 +21,9 @@ export function Footer({ scrollTo }: { scrollTo: (id: string) => void }) {
                     <div>
                         <h4 className="mb-3 text-sm font-semibold text-foreground">Produto</h4>
                         <ul className="space-y-2 text-sm text-muted-foreground">
-                            <li><button onClick={() => scrollTo("funcionalidades")} className="hover:text-primary transition-colors text-left">Funcionalidades</button></li>
-                            <li><button onClick={() => scrollTo("planos")} className="hover:text-primary transition-colors text-left">Planos</button></li>
-                            <li><button onClick={() => scrollTo("faq")} className="hover:text-primary transition-colors text-left">FAQ</button></li>
+                            <li><Link to="/funcionalidades" className="hover:text-primary transition-colors text-left uppercase">Funcionalidades</Link></li>
+                            <li><Link to="/planos" className="hover:text-primary transition-colors text-left uppercase">Planos</Link></li>
+                            <li><Link to="/faq" className="hover:text-primary transition-colors text-left uppercase">FAQ</Link></li>
                         </ul>
                     </div>
 
