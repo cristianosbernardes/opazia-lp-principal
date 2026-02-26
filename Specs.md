@@ -277,6 +277,25 @@ await resend.emails.send({
 
 ---
 
+## 5. GESTÃO DE COOKIES E CONSENTIMENTO
+- **Componente Core**: `CookieConsent.tsx` rodando no `App.tsx` (Global).
+- **Storage**: Uso de `localStorage` com a chave `opazia_cookie_consent`.
+- **Estrutura de Dados Salva**:
+  ```json
+  {
+    "accepted": true,
+    "preferences": {
+      "essential": true,
+      "analytics": boolean,
+      "marketing": boolean
+    },
+    "expires": 1735689600000 // Timestamp (365 dias)
+  }
+  ```
+- **Comportamento Visual**: Animação de entrada via `framer-motion`, alinhamento no rodapé (max-w-7xl) alinhado ao container principal.
+
+---
+
 ## 5. DIRETRIZES DE DESENVOLVIMENTO
 
 ### Clean Code (Frontend)

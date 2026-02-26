@@ -103,9 +103,11 @@ Padronização de cores para badges de status:
 - **Desconectado / Erro:** Vermelho/Destructive (`bg-red-100 text-red-700 border-red-200`).
 - **Neutro / Inativo:** Cinza/Muted (`bg-gray-100 text-gray-700 border-gray-200`).
 
-### 4.4. Feedback e Popups (Dialogs/Alerts)
+### 4.4. Feedback e Popups (Dialogs/Alerts/Banners)
 - **Botão Destrutivo:** SEMPRE usar `variant="destructive"`.
-- **Botão Cancelar:** Deve ter borda visível para contraste claro sob o modal branco.
+- **Botão Secundário (Cancelar/Outline):** Deve ter borda visível cinza (`border-gray-300`) e ao sofrer hover deve escurecer sutilmente o fundo (`hover:bg-gray-100`) para não "desaparecer" se a cor natural de hover for clara.
+- **Botão Primário (Solid):** Em popups, se a cor primária for vibrante (laranja/vermelho), forçar `text-white` para garantir legibilidade.
+- **Borda de Banners e Modais Light:** Usar luminosidade de 85% (equivalente a `#d9d9d9` ou `border-gray-200`) para separar fisicamente os elementos do fundo branco.
 - **PROIBIDO:** O uso de diálogos nativos do navegador (`window.alert`, `window.confirm`, `window.prompt`).
 
 ### 4.5. Scrollbars e Abas (Tabs)

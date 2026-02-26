@@ -109,7 +109,13 @@
 - **Setup Inicial**: Criação de Organização e Perfil guiada.
 - **Tour Visual**: Destaque para funcionalidades chave no primeiro acesso.
 
-## 8. MÉTRICAS DE SUCESSO
+## 8. CONFORMIDADE LEGAL (LGPD/GDPR)
+- **Cookie Consent**: Banner flutuante inferior solicitando consentimento para cookies não-essenciais.
+- **Centro de Preferências**: Opção para usuário personalizar cookies (Essenciais, Análise, Publicidade).
+- **Persistência**: Consentimento expira a cada 365 dias e fica armazenado localmente (`localStorage`).
+- **Política de Privacidade**: Links diretos e claros para os documentos oficiais em todos os banners de coleta de dados.
+
+## 9. MÉTRICAS DE SUCESSO
 - Conversão de Leads (Taxa de Fechamento).
 - Retenção de Clientes (Churn Rate do SaaS).
 - Engajamento Diário (DAU/MAU).
